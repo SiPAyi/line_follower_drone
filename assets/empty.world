@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+<!-- 
+<model name="track1_s80">
+  <static>true</static>
+  <pose>0 0 0 0 0 0</pose>
+  <link name="track_link">
+    <visual name="track_visual">
+      <geometry>
+        <mesh>
+          <uri>file:///home/sai/BuggyRace/src/virtual_world/sdf/worlds/tracks/track1_s80.dae</uri>
+        </mesh>
+      </geometry>
+    </visual>
+    <collision name="track_collision">
+      <geometry>
+        <mesh>
+          <uri>file:///home/sai/BuggyRace/src/virtual_world/sdf/worlds/tracks/track1_s80.dae</uri>
+        </mesh>
+      </geometry>
+      <surface>
+		<friction>
+		  <ode>
+		    <mu>1.0</mu>
+		    <mu2>1.0</mu2>
+		  </ode>
+		</friction>
+	  </surface>
+    </collision>
+  </link>
+</model>
+-->
+    
+    <physics name='default_physics' default='0' type='ode'>
+      <gravity>0 0 -9.8066</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>10</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+      <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
+    </physics>
+  </world>
+</sdf>
