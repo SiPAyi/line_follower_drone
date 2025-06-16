@@ -162,7 +162,7 @@ This repo includes the following files inside the `assets/` folder:
 
 ---
 
-## 📚 Acknowledgements
+## 📚 Resources to learn more
 
 * [PX4 Autopilot](https://docs.px4.io/main/en/sim_gazebo_classic/)
 * [ROS 2](https://docs.ros.org/en/humble/index.html)
